@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Pi Club Advert</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+<style>
+</style>
+<style>
+    html,
+    body,
+    * {
+        padding: 0;
+        margin: 0;
+        color: #fff;
+    }
+
+    .illustration {
+        border-radius: 0.375rem;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(40deg, #0A2463, #003ac4);
+        overflow: hidden;
+        box-sizing: border-box;
+        border: 1px solid #5885EE;
+        cursor: pointer;
+        display: block;
+        position: relative;
+    }
+
+    .illustration .btn {
+        position: absolute;
+        left: 32px;
+        top: 165px;
+        border: none;
+        display: inline-block;
+        z-index: 3;
+    }
+
+    .pattern {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%231be7ff' fill-opacity='0.26' fill-rule='evenodd'/%3E%3C/svg%3E");
+        z-index: 0;
+        opacity: 0.5;
+        overflow: hidden;
+    }
+
+    .illustration svg {
+        width: 175px;
+        height: 175px;
+        margin: 28px 12px;
+        margin-left: calc(100% - 150px - 85px);
+        z-index: 1;
+        position: relative;
+        animation: float 5s ease-in-out infinite;
+        display: block;
+    }
+
+    .illustration:hover .shine {
+        transform: skewX(30deg) translateX(750%);
+    }
+
+    .illustration h3 {
+        font-family: 'Merriweather';
+        font-weight: bold;
+        position: absolute;
+        left: 15px;
+        top: 5px;
+        font-size: 20pt;
+        z-index: 1;
+        color: #fff;
+        animation-name: float;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .illustration h3 span {
+        font-size: 34pt;
+        color: #FFE500;
+        margin-right: -8px;
+    }
+
+    .illustration > p {
+        position: absolute;
+        left: 32px;
+        top: 75px;
+        max-width: 300px;
+        margin-right: 15px;
+        line-height: 175%;
+        font-size: 11pt;
+    }
+
+    .shine {
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        left: -125px;
+        height: 100%;
+        width: 125px;
+        background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0.2),
+                rgba(255, 255, 255, 0));
+        transition: all 0.35s ease-in-out;
+        transform: skewX(25deg) translateX(0);
+    }
+
+    @keyframes float {
+        0% {
+            filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.08)) brightness(115%);
+            -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+        }
+
+        50% {
+            filter: drop-shadow(8px 8px 3px rgba(0, 0, 0, 0.05)) brightness(115%);
+            -webkit-transform: translatey(-3px);
+            transform: translatey(-3px);
+        }
+
+        100% {
+            filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.08)) brightness(115%);
+            -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+        }
+    }
+
+    ul {
+        position: absolute;
+        top: 70px;
+        left: 15px;
+        font-size: 10pt;
+        line-height: 200%;
+        font-family: sans-serif;
+        font-weight: bold;
+        list-style: none;
+        animation-delay: 200ms;
+        animation-name: float;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    ul li:before {
+        content: '✓';
+        margin-right: 4px;
+        vertical-align: top;
+        font-size: 12pt;
+        color: #FFE500;
+    }
+</style>
+
+<body>
+
+    <a target="_parent" href="https://www.mathbanana.com/pi?adref=5875780355" class="illustration card">
+        <h3 className="text-white text-3xl font-bold">
+            <span className="text-5xl">
+                𝜋
+            </span>
+            &#8202;
+            Club
+        </h3>
+        <ul>
+            <li>
+                2,000 coin bonus
+            </li>
+            <li>
+                Unlimited answers
+            </li>
+            <li>
+                Unlimited calculations
+            </li>
+            <li>
+                <i>
+                    Only $14.99
+                </i>
+            </li>
+        </ul>
+        <div class="pattern"></div>
+        <div class="shine"></div>
+    </a>
+
+</body>
+
+</html>
